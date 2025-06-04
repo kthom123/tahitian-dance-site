@@ -1,7 +1,5 @@
 from fastapi import FastAPI
+from routes.homepage import router
 
 app = FastAPI()
-
-@app.get("/")
-def homepage():
-    return {"message": "Welcome to Tahitian Dance School"}
+app.include_router(router, prefix="/api", tags=["homepage"])

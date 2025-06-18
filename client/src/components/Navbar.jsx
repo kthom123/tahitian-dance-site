@@ -7,12 +7,13 @@ function Navbar() {
         Avae Api
       </div>
       <ul className="flex gap-6 text-lg font-medium">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#classes">Classes</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#login">Login</a></li>
-        <li><a href="#signup">Sign Up</a></li>
+        <li><a href="#home" className="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#about" className="hover:text-blue-600 transition">About Us</a></li>
+        <li><a href="#classes" className="hover:text-blue-600 transition">Classes</a></li>
+        <li><a href="#instructor" className="hover:text-blue-600 transition">Instructor</a></li>
+        <li><a href="#events" className="hover:text-blue-600 transition">Events</a></li>
+        <li><a href="#trial lesson" className="hover:text-blue-600 transition">Trial Lesson</a></li>
+        <li><a href="#contact" className="hover:text-blue-600 transition">Contact</a></li>
       </ul>
     </nav>
   );

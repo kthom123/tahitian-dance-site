@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Navbar from "./components/Navbar";
+import Hero from './components/Hero';
 import './App.css';
 
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
       <Navbar />
+      <Hero />
       <h1>Tahitian Dance School</h1>
       <p>{message}</p>
     </div>

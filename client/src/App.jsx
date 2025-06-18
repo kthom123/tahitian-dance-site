@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import Navbar from "./components/Navbar";
 
 function App() {
   const [message, setMessage] = useState('');
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
+      <Navbar />
       <h1>Tahitian Dance School</h1>
       <p>{message}</p>
     </div>

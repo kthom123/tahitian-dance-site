@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
+    <div style={{ fontFamily: 'Arial, sans-serif' }}>
       <Navbar />
       <Hero />
       <h1>Tahitian Dance School</h1>

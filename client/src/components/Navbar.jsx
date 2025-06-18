@@ -7,7 +7,7 @@ function Navbar() {
       <div className="text-2xl font-bold">
         Avae Api
       </div>
-      <ul className="flex gap-6 text-lg font-medium">
+      <ul className="flex gap-6 text-lg font-medium justify-right">
         <li><a href="#home" className="hover:text-blue-600 transition">Home</a></li>
         <li><a href="#about" className="hover:text-blue-600 transition">About Us</a></li>
         <li><a href="#classes" className="hover:text-blue-600 transition">Classes</a></li>

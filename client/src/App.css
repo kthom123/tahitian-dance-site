@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+/* Make sure html and body have no margin/padding */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

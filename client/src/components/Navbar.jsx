@@ -8,13 +8,13 @@ function Navbar() {
             <img src="/images/logo.png" alt="Logo" className="logo-img" />
         </div>
         <ul className="flex gap-6 text-lg font-medium">
-            <li><a href="#home" className="hover:text-blue-600 transition">ホーム</a></li>
-            <li><a href="#about" className="hover:text-blue-600 transition">教室紹介</a></li>
-            <li><a href="#classes" className="hover:text-blue-600 transition">クラス紹介</a></li>
-            <li><a href="#instructor" className="hover:text-blue-600 transition">講師紹介</a></li>
-            <li><a href="#events" className="hover:text-blue-600 transition">イベント出演情報</a></li>
-            <li><a href="#trial lesson" className="hover:text-blue-600 transition">体験レッスン</a></li>
-            <li><a href="#contact" className="hover:text-blue-600 transition">お問合せ</a></li>
+            <li><a href="#home">ホーム</a></li>
+            <li><a href="#about">教室紹介</a></li>
+            <li><a href="#classes">クラス紹介</a></li>
+            <li><a href="#instructor">講師紹介</a></li>
+            <li><a href="#events">イベント出演情報</a></li>
+            <li><a href="#trial-lesson">体験レッスン</a></li>
+            <li><a href="#contact">お問合せ</a></li>
         </ul>
     </nav>
   );

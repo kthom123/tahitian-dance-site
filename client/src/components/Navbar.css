@@ -1,17 +1,30 @@
+/* === Navbar Container === */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   background-color: #f8f8f8;
   padding: 1rem 2rem;
   width: 100%;
-  box-sizing: border-box;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+/* === Left Logo + Title === */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-img {
+  max-height: 40px;
+  width: auto;
+}
+
+/* === Nav Links === */
 nav ul {
   display: flex;
   list-style: none;
@@ -20,7 +33,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 1.5rem;
+  margin-right: 1.2rem;
 }
 
 nav ul li:last-child {
@@ -28,22 +41,15 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-  text-decoration: none;
+  text-decoration: none !important;              /* ✅ removes underline */
   color: #333;
-  font-weight: bold;
+  font-weight: 300;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #0070f3;
-}
-
-.logo-title {
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
+  background-color: #dbeeff;          /* ✅ light blue highlight */
+  color: #000;
 }

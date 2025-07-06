@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import Navbar from "./components/Navbar";
 import Hero from './components/Hero';
+import About from './components/About';
+
+
 import './App.css';
 
 
@@ -18,8 +21,7 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <h1>Tahitian Dance School</h1>
-      <p>{message}</p>
+      <About />
     </div>
   );
 }

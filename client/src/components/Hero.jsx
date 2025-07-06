@@ -5,9 +5,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Embrace the Spirit of Tahiti</h1>
-        <p>Join our vibrant Tahitian dance community and learn from passionate instructors.</p>
-        <button>Get Started</button>
+        <h1>Avae Api</h1>
       </div>
     </section>
   );

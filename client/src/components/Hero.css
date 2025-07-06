@@ -1,40 +1,21 @@
 .hero {
-  background-image: url('/images/hero-bg.jpg'); /* Replace this with your own image */
+  background-image: url('/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   padding: 6rem 2rem;
-  color: white;
-  text-align: center;
+  color: rgb(14, 23, 34);
+  text-align: center ;
 }
 
 .hero-content {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.822);
   padding: 2rem;
   border-radius: 12px;
-  max-width: 800px;
+  max-width: 400px;
   margin: auto;
 }
 
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-.hero button {
-  background-color: #ff4081;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.hero button:hover {
-  background-color: #e91e63;
 }

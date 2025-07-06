@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+    <div>
       <Navbar />
       <Hero />
       <h1>Tahitian Dance School</h1>

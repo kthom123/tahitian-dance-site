@@ -36,3 +36,14 @@ nav ul li a {
 nav ul li a:hover {
   color: #0070f3;
 }
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}

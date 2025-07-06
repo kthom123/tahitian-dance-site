@@ -6,7 +6,6 @@ function Navbar() {
     <nav className="w-full flex items-center justify-between px-6 py-4 shadow-md bg-white">
         <div className="logo-title">
             <img src="/images/logo.png" alt="Logo" className="logo-img" />
-            <span className="school-name">Avae Api</span>
         </div>
         <ul className="flex gap-6 text-lg font-medium">
             <li><a href="#home" className="hover:text-blue-600 transition">Home</a></li>

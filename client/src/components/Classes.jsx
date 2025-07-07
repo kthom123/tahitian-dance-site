@@ -23,6 +23,18 @@ function Classes() {
           <h3>___________</h3>
           <p>___________</p>
         </div>
+
+        {/* Card 4 */}
+        <div className="class-card">
+          <h3>___________</h3>
+          <p>___________</p>
+        </div>
+
+        {/* Card 5 */}
+        <div className="class-card">
+          <h3>___________</h3>
+          <p>___________</p>
+        </div>
       </div>
     </section>
   );

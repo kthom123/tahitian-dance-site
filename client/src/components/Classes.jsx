@@ -41,8 +41,7 @@ function Classes() {
 
         {/* Card 5 */}
         <div className="class-card">
-          <h3>___________</h3>
-          <p>___________</p>
+          <h3>🌸教室公式SNS/Instagram</h3>
         </div>
       </div>
     </section>

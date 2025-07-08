@@ -1,5 +1,5 @@
 .classes-section {
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -12,17 +12,21 @@
 
 .classes-grid {
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  gap: 1.5rem;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
 }
 
 .class-card {
   background-color: #fff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  width: 280px;
+  padding: 1.5rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  flex: 1 1 18%;
+  min-width: 180px;
+  max-width: 220px;
   transition: transform 0.3s ease;
 }
 

@@ -18,14 +18,14 @@
 .flip-card {
   background-color: transparent;
   width: 260px;
+  height: 300px;
   perspective: 1000px;
-  flex: 1 1 260px;
 }
 
 .flip-inner {
   position: relative;
   width: 100%;
-  aspect-ratio: 2 / 3;
+  height: 100%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;

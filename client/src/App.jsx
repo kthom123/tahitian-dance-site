@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Classes from "./components/Classes";
 import ClassDetails from "./components/ClassDetails";
+import Instructor from './components/Instructor';
 
 
 import './App.css';
@@ -26,6 +27,7 @@ function App() {
       <About />
       <Classes />
       <ClassDetails />
+      <Instructor />
     </div>
   );
 }

@@ -6,11 +6,13 @@ function Instructor() {
     <section className="instructor-section" id="instructor">
       <h2 className="instructor-heading">講師紹介</h2>
       <div className="instructor-container">
-        <img
-          src="/images/instructor.png"
-          alt="Instructor"
-          className="instructor-photo"
-        />
+        <div className="instructor-image-group">
+            <img src="/images/instructor.png" alt="Instructor" className="instructor-photo" />
+            <p className="instructor-name">
+                木月けい <br></br> 
+                Kei Kizuki
+            </p>
+        </div>
         <div className="instructor-bio">
           <p>
             タヒチアンダンスの心揺さぶるドラムビート、人や自然への愛にあふれたタヒチ文化は、目に見えない大切なものに気づかせてくれました。

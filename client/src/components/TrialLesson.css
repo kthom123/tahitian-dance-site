@@ -1,0 +1,52 @@
+.trial-section {
+  padding: 4rem 2rem;
+  background-color: #fff5f8;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+}
+
+.trial-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.trial-description {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.8;
+}
+
+.trial-items {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.trial-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.trial-items ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.trial-items li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.trial-fee {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}

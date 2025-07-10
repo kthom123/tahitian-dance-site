@@ -8,6 +8,7 @@ import Instructor from './components/Instructor';
 import Events from './components/Events';
 import TrialLesson from './components/TrialLesson';
 import Contact from './components/Contact';
+import Gallery from './components/Gallery';
 
 import './App.css';
 
@@ -33,6 +34,7 @@ function App() {
       <Events />
       <TrialLesson />
       <Contact />
+      <Gallery />
     </div>
   );
 }

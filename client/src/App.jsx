@@ -5,7 +5,7 @@ import About from './components/About';
 import Classes from "./components/Classes";
 import ClassDetails from "./components/ClassDetails";
 import Instructor from './components/Instructor';
-
+import Events from './components/Events';
 
 import './App.css';
 
@@ -28,6 +28,7 @@ function App() {
       <Classes />
       <ClassDetails />
       <Instructor />
+      <Events />
     </div>
   );
 }

@@ -12,18 +12,6 @@ nav {
   justify-content: space-between;
 }
 
-/* === Left Logo + Title === */
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.logo-img {
-  max-height: 40px;
-  width: auto;
-}
-
 /* === Nav Links === */
 nav ul {
   display: flex;

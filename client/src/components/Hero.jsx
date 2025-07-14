@@ -4,9 +4,7 @@ import './Hero.css';
 function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
-        <h1>Avae Api</h1>
-      </div>
+      <img src="/images/logo.png" alt="Avae Api Logo" className="hero-logo" />
     </section>
   );
 }

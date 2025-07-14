@@ -1,21 +1,35 @@
 .hero {
+  position: relative;
   background-image: url('/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
-  padding: 6rem 2rem;
-  color: rgb(14, 23, 34);
-  text-align: center ;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.hero-content {
-  background-color: rgba(255, 255, 255, 0.822);
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 400px;
-  margin: auto;
+/* Dark overlay for visibility */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.089);
+  z-index: 1;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+/* Logo centered in Hero */
+.hero-logo {
+  width: 200px; /* adjust size if needed */
+  z-index: 2;
+  filter: drop-shadow(0 0 8px white); /* glow to improve contrast */
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
 }

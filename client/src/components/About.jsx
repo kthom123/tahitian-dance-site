@@ -4,9 +4,7 @@ import './About.css';
 function About() {
   return (
     <section id="about" className="about-section">
-        <h2 className="about-heading">
-            アヴァエアピ タヒチアンダンス教室へようこそ
-        </h2>
+        <h2 className="about-heading">アヴァエアピ タヒチアンダンス教室へようこそ</h2>
         <div className="about-image">
             <img src="/images/about.png" alt="about-pic" className="about-img" />
         </div>

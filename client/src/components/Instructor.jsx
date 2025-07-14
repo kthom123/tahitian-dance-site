@@ -3,7 +3,7 @@ import "./Instructor.css";
 
 function Instructor() {
   return (
-    <section className="instructor-section" id="instructor">
+    <section id="instructor" className="instructor-section">
       <h2 className="instructor-heading">講師紹介</h2>
       <div className="instructor-container">
         <div className="instructor-image-group">

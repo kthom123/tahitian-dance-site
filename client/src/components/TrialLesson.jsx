@@ -3,7 +3,7 @@ import "./TrialLesson.css";
 
 function TrialLesson() {
   return (
-    <section className="trial-section" id="trial">
+    <section id="trial-lesson" className="trial-section">
       <h2 className="trial-title">体験レッスン</h2>
 
       <p className="trial-description">

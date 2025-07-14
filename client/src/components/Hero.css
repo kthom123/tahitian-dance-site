@@ -24,9 +24,9 @@
 
 /* Logo centered in Hero */
 .hero-logo {
-  width: 200px; /* adjust size if needed */
+  width: 400px; /* adjust size if needed */
   z-index: 2;
-  filter: drop-shadow(0 0 8px white); /* glow to improve contrast */
+  filter: drop-shadow(0 0 8px rgb(108, 108, 108));
   transition: transform 0.3s ease;
 }
 

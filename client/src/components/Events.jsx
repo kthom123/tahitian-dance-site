@@ -17,7 +17,7 @@ function Events() {
   ];
 
   return (
-    <section className="events-section" id="events">
+    <section id="events" className="events-section">
       <h2 className="events-title">イベント出演情報</h2>
       <div className="events-grid">
         {events.map((event, index) => (

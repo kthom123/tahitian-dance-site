@@ -3,7 +3,7 @@ import "./Classes.css";
 
 function Classes() {
   return (
-    <section className="classes-section">
+    <section id="classes" className="classes-section">
       <h2 className="classes-title">クラス紹介</h2>
       <div className="classes-grid">
         {/* Card 1 */}

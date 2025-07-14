@@ -1,14 +1,14 @@
 .trial-section {
   padding: 4rem 2rem;
-  background-color: #fff5f8;
+  background-color: #ffffff;
   text-align: center;
   font-family: 'Cinzel', serif;
 }
 
 .trial-title {
-  font-size: 2rem;
+  font-size: 2.0rem;
   margin-bottom: 2rem;
-  font-weight: bold;
+  color: #213547;
 }
 
 .trial-description {

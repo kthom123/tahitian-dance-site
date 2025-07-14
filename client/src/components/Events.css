@@ -1,13 +1,13 @@
 .events-section {
   padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  background-color: #f8f8f8;
   text-align: center;
 }
 
 .events-title {
-  font-size: 2rem;
+  font-size: 2.0rem;
   margin-bottom: 2rem;
-  font-weight: bold;
+  color: #213547;
 }
 
 .events-grid {

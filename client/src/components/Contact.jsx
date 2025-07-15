@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Contact.css";
 
 function Contact() {
-  const [status, setStatus] = useState("Submit");
+  const [status, setStatus] = useState("送信");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ function Contact() {
       body: JSON.stringify(details),
     });
 
-    setStatus("Submit");
+    setStatus("送信");
     if (response.ok) {
       alert("メッセージが送信されました。ありがとうございます！");
       e.target.reset();

@@ -8,10 +8,10 @@ function Instructor() {
       <div className="instructor-container">
         <div className="instructor-image-group">
             <img src="/images/instructor.png" alt="Instructor" className="instructor-photo" />
-            <p className="instructor-name">
-                木月けい <br></br> 
-                Kei Kizuki
-            </p>
+            <div className="instructor-name-group">
+                <p className="instructor-name-jp">木月けい</p>
+                <p className="instructor-name-en">Kei Kizuki</p>        
+            </div>
         </div>
         <div className="instructor-bio">
           <p>

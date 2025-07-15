@@ -14,12 +14,12 @@ function Contact() {
       message: message.value,
     };
 
-    const response = await fetch("https://formspree.io/f/yourFormId", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(details),
+    const response = await fetch("http://localhost:8000/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(details),
     });
 
     setStatus("送信");

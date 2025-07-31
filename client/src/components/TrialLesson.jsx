@@ -8,7 +8,7 @@ function TrialLesson() {
 
       <p className="trial-description">
         体験レッスンご希望の方は、お問合せフォームよりご連絡ください。<br />
-        経験・未経験問わず、新規生徒様募集中です。現在開講していないクラスも、お気軽にご相談ください。
+        経験・未経験問わず、新規生徒様募集中です。<br />現在開講していないクラスも、お気軽にご相談ください。
       </p>
 
       <div className="trial-items">

@@ -38,14 +38,15 @@
 }
 
 .class-card h3 {
-  font-size: 1.0rem;
+  font-size: 1.15rem;
   margin-bottom: 1rem;
   color: #ffffff;
 }
 
 .class-card p {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #fffefe;
+  text-align: left;
 }
 
 @keyframes strobeForward {

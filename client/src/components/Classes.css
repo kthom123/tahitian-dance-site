@@ -21,7 +21,7 @@
 }
 
 .class-card {
-  background-color: #dbf5ff;
+  background-color: #1d5367;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(135, 219, 217, 0.2);
   border-radius: 12px;
@@ -40,12 +40,12 @@
 .class-card h3 {
   font-size: 1.0rem;
   margin-bottom: 1rem;
-  color: #213547;
+  color: #ffffff;
 }
 
 .class-card p {
   font-size: 1rem;
-  color: #333;
+  color: #fffefe;
 }
 
 @keyframes strobeForward {

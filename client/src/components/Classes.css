@@ -21,7 +21,7 @@
 }
 
 .class-card {
-  background-color: #1d5367;
+  background: url("/images/watercolor.png") no-repeat center center/cover;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(135, 219, 217, 0.2);
   border-radius: 12px;
@@ -29,6 +29,7 @@
   min-width: 180px;
   max-width: 220px;
   transition: transform 0.3s ease;
+  color: white;
 }
 
 .class-card:hover {

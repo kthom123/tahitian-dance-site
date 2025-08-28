@@ -4,16 +4,10 @@ import "./Events.css";
 function Events() {
   const events = [
     {
-      title: "サマーショーケース",
-      date: "2025年8月12日",
-      description: "詳細をお楽しみに"
-    },
-    {
-      title: "文化祭",
-      date: "2025年9月10日",
-      description: "詳細をお楽しみに"
-    },
-    // Add more events here
+      title: "配信",
+      date: "",
+      description: ""
+    }
   ];
 
   return (

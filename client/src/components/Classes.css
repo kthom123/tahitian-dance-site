@@ -42,6 +42,31 @@
   font-size: 1.15rem;
   margin-bottom: 1rem;
   color: #ffffff;
+  line-height: 1.2;
+  position: relative;
+}
+
+.class-card h3::before {
+  content: "";
+  display: inline-block;
+  background: url("/images/flower.png") no-repeat center center;
+  background-size: contain;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: text-top;
+  margin-right: 0.3em;
+}
+
+.class-heading {
+  display: inline; /* ensures normal inline behavior */
+}
+
+.class-heading .flower-icon {
+  width: 1.2em;
+  height: 1.2em;
+  object-fit: contain;
+  vertical-align: text-top; /* aligns with first line of text */
+  margin-right: 0.3em;      /* space between icon and text */
 }
 
 .class-card p {

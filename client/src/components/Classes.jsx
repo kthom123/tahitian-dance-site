@@ -7,11 +7,12 @@ function Classes() {
       <h2 className="classes-title">クラス紹介</h2>
       <div className="classes-grid">
         {/* Card 1 */}
-        <div className="class-card">
+       <div className="class-card">
           <h3>レベル・年齢<br />問いません</h3>
           <p>ダンス未経験の方も、経験者の方も大歓迎です。
             お子様からマダムまで、それぞれのペースやレベルに合わせたレッスンを提供します。
-            現在プレオープン中のため、ご希望に応じて新規クラスも開講予定です。</p>
+            現在プレオープン中のため、ご希望に応じて新規クラスも開講予定です。
+          </p>
         </div>
 
         {/* Card 2 */}

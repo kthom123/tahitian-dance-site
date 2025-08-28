@@ -19,13 +19,18 @@
 }
 
 .trial-items {
-  background-color: #ffffff;
+  position: relative;
+  background: url("/images/watercolor.png") no-repeat center center/cover;
   border-radius: 12px;
   padding: 2rem;
   max-width: 600px;
   margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(135, 219, 217, 0.2);
   text-align: left;
+  color: white;
+  font-family: 'Cinzel', serif;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trial-subtitle {
@@ -49,4 +54,14 @@
   font-size: 1rem;
   color: #444;
   line-height: 1.6;
+}
+
+.trial-items * {
+  position: relative;
+  z-index: 1;
+}
+
+.trial-items:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(135, 219, 217, 0.4);
 }

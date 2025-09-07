@@ -3,7 +3,7 @@
   background-image: url('/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: clamp(40vh, 60vw, 60vh); /* scales with viewport */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,11 +24,10 @@
 
 /* Logo centered in Hero */
 .hero-logo {
-  width: 400px; /* default desktop size */
+  width: clamp(200px, 35vw, 400px); /* scales with screen size */
   z-index: 2;
   position: relative;
-  bottom: 20%;
-  left: 35%;
+  bottom: clamp(10%, 15vw, 20%);
   filter: drop-shadow(0 0 8px rgb(74, 72, 72));
   transition: transform 0.3s ease;
 }
@@ -37,36 +36,28 @@
   transform: scale(1.05);
 }
 
-/* === Tablet / Mobile Responsiveness === */
-@media (max-width: 1024px) {
+/* === MEDIA QUERIES === */
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .hero {
-    height: 50vh;
+    height: clamp(35vh, 50vw, 50vh);
   }
+
   .hero-logo {
-    width: 300px;
-    bottom: 15%;
-    left: 30%;
+    width: clamp(180px, 40vw, 300px);
+    bottom: clamp(8%, 12vw, 15%);
   }
 }
 
-@media (max-width: 768px) {
+/* Small devices (below 768px) */
+@media (max-width: 767px) {
   .hero {
-    height: 45vh;
+    height: clamp(30vh, 60vw, 40vh);
   }
-  .hero-logo {
-    width: 220px;
-    bottom: 10%;
-    left: 25%;
-  }
-}
 
-@media (max-width: 480px) {
-  .hero {
-    height: 40vh;
-  }
   .hero-logo {
-    width: 160px;
-    bottom: 8%;
-    left: 20%;
+    width: clamp(150px, 50vw, 200px);
+    bottom: clamp(5%, 10vw, 10%);
   }
 }

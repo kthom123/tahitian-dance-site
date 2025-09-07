@@ -1,31 +1,29 @@
 .instructor-section {
-  padding: 4rem 1rem;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 3vw, 2rem);
   background-color: #ffffff;
   text-align: center;
 }
 
 .instructor-heading {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
   color: #213547;
 }
 
-/* Container: photo + bio */
 .instructor-container {
   display: flex;
-  flex-direction: row;       /* side-by-side on desktop */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
-  gap: 2rem;
-  flex-wrap: wrap;           /* fallback for smaller screens */
+  gap: clamp(1rem, 3vw, 2rem);
+  flex-wrap: wrap; /* wraps on smaller devices */
   text-align: left;
 }
 
-/* Photo */
 .instructor-photo {
-  width: 300px;
+  width: clamp(200px, 25vw, 300px);
   height: auto;
   border-radius: 12px;
   object-fit: cover;
@@ -33,15 +31,13 @@
   flex-shrink: 0;
 }
 
-/* Bio text */
 .instructor-bio {
   flex: 1;
   max-width: 600px;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2vw, 1rem);
   line-height: 1.8;
 }
 
-/* Image + name groups */
 .instructor-image-group {
   display: flex;
   flex-direction: column;
@@ -50,65 +46,45 @@
 
 .instructor-name-group {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: clamp(0.3rem, 1vw, 0.5rem);
 }
 
 .instructor-name-jp,
 .instructor-name-en {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: bold;
   color: #333;
   margin: 0;
 }
 
-/* === Tablet / Mobile Responsiveness === */
-@media (max-width: 1024px) {
-  .instructor-container {
-    gap: 1.5rem;
-  }
+/* === MEDIA QUERIES === */
 
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .instructor-photo {
-    width: 250px;
+    width: clamp(180px, 30vw, 250px);
   }
 
   .instructor-bio {
-    font-size: 0.95rem;
-    max-width: 500px;
+    font-size: clamp(0.95rem, 2.5vw, 1rem);
   }
 }
 
-@media (max-width: 768px) {
+/* Small devices (below 768px) */
+@media (max-width: 767px) {
   .instructor-container {
-    flex-direction: column;   /* stack photo above bio */
+    flex-direction: column;
     text-align: center;
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .instructor-photo {
+    width: clamp(150px, 40vw, 200px);
   }
 
   .instructor-bio {
     text-align: left;
-    padding: 0 1rem;
-  }
-
-  .instructor-photo {
-    width: 220px;
-  }
-
-  .instructor-bio {
-    font-size: 0.9rem;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .instructor-photo {
-    width: 180px;
-  }
-
-  .instructor-bio {
-    font-size: 0.85rem;
-    padding: 0 0.5rem;
-  }
-
-  .instructor-heading {
-    font-size: 1.6rem;
+    font-size: clamp(0.9rem, 3vw, 0.95rem);
+    padding: 0 clamp(1rem, 3vw, 1rem);
   }
 }

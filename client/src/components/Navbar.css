@@ -1,7 +1,7 @@
 /* === Navbar Container === */
 nav {
   background-color: #ffffff;
-  padding: 1rem 2rem;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
   width: 100%;
   height: 60px;
   position: sticky;
@@ -9,29 +9,21 @@ nav {
   z-index: 100;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between; /* logo left, links right */
-  align-items: center;
+  justify-content: flex-end; /* pushes content to right */
 }
 
-/* === Logo (optional) === */
-nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #213547;
-}
-
-/* === Nav Links === */
+/* === Nav Links Container === */
 .nav-links {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  width: auto;
+  width: 100%;
 }
 
+/* === Nav Links === */
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1.2rem;
+  gap: clamp(0.5rem, 1vw, 1.2rem);
   margin: 0;
   padding: 0;
 }
@@ -40,8 +32,9 @@ nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: 400;
-  padding: 0.5rem 1rem;
+  padding: clamp(0.3rem, 0.8vw, 0.5rem) clamp(0.5rem, 1vw, 1rem);
   border-radius: 999px;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
@@ -52,41 +45,30 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* === Mobile Hamburger Menu === */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+/* === MEDIA QUERIES for mobile === */
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav ul li a {
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.6rem, 1vw, 1rem);
+  }
 }
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  transition: all 0.3s ease;
-}
+/* Small devices (below 768px) */
+@media (max-width: 767px) {
+  nav {
+    justify-content: center;
+    height: clamp(50px, 8vw, 60px);
+  }
 
-/* === Responsive === */
-@media (max-width: 768px) {
   nav ul {
-    display: none;          /* hide links by default */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #fff;
-    width: 200px;
-    padding: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: clamp(0.3rem, 2vw, 0.8rem);
   }
 
-  nav ul.show {
-    display: flex;          /* show when hamburger clicked */
-  }
-
-  .hamburger {
-    display: flex;          /* show hamburger icon */
+  nav ul li a {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    padding: clamp(0.3rem, 2vw, 0.4rem) clamp(0.5rem, 2vw, 0.6rem);
   }
 }

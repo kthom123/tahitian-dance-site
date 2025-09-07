@@ -1,19 +1,19 @@
 .contact-section {
-  padding: 4rem 2rem;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 3vw, 2rem);
   background-color: #f8f8f8;
   text-align: center;
   font-family: 'Cinzel', serif;
 }
 
 .contact-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
   color: #213547;
 }
 
 .contact-description {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -25,23 +25,21 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
-  gap: 1rem;
+  padding-top: clamp(0.5rem, 2vw, 1rem);
+  gap: clamp(0.5rem, 2vw, 1rem);
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .contact-form button {
-  padding: 0.75rem;
-  font-size: 1rem;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   background-color: #007bff;
   color: white;
   border: none;
@@ -53,51 +51,38 @@
   background-color: #0056b3;
 }
 
-/* === Tablet === */
-@media (max-width: 768px) {
-  .contact-section {
-    padding: 3rem 1.5rem;
-  }
+/* === MEDIA QUERIES === */
 
-  .contact-title {
-    font-size: 1.6rem;
-  }
-
-  .contact-description {
-    font-size: 1rem;
-  }
-}
-
-/* === Mobile === */
-@media (max-width: 480px) {
-  .contact-section {
-    padding: 2rem 1rem;
-  }
-
-  .contact-title {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-description {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    text-align: center;
-  }
-
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .contact-form {
-    gap: 0.75rem;
-    padding-top: 0.5rem;
+    max-width: 80%;
+    gap: clamp(0.5rem, 2vw, 0.8rem);
   }
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 0.95rem;
-    padding: 0.65rem 0.8rem;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
   }
 
   .contact-form button {
-    font-size: 0.95rem;
-    padding: 0.65rem;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+  }
+}
+
+/* Small devices (below 768px) */
+@media (max-width: 767px) {
+  .contact-form {
+    max-width: 90%;
+    gap: clamp(0.3rem, 3vw, 0.6rem);
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  }
+
+  .contact-form button {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
   }
 }

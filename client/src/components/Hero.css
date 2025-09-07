@@ -3,14 +3,11 @@
   background-image: url('/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
-  height: clamp(40vh, 60vw, 60vh); /* scales with viewport */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 60vh;
   overflow: hidden;
 }
 
-/* Dark overlay for visibility */
+/* Dark overlay */
 .hero::before {
   content: '';
   position: absolute;
@@ -22,12 +19,13 @@
   z-index: 1;
 }
 
-/* Logo centered in Hero */
+/* Logo positioned top-right */
 .hero-logo {
-  width: clamp(200px, 35vw, 400px); /* scales with screen size */
+  position: absolute;
+  top: 1rem;   /* adjust spacing from top */
+  right: 1rem; /* adjust spacing from right */
+  width: clamp(150px, 20vw, 300px); /* responsive scaling */
   z-index: 2;
-  position: relative;
-  bottom: clamp(10%, 15vw, 20%);
   filter: drop-shadow(0 0 8px rgb(74, 72, 72));
   transition: transform 0.3s ease;
 }
@@ -35,6 +33,7 @@
 .hero-logo:hover {
   transform: scale(1.05);
 }
+
 
 /* === MEDIA QUERIES === */
 

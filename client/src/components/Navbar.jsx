@@ -1,9 +1,19 @@
 import "./Navbar.css";
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav>
-      <div className="nav-links">
+      {/* Hamburger Button */}
+      <div className="hamburger" onClick={() => setOpen(!open)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      {/* Nav Links */}
+      <div className={`nav-links ${open ? "active" : ""}`}>
         <ul>
           <li><a href="#home">ホーム</a></li>
           <li><a href="#about">教室紹介</a></li>

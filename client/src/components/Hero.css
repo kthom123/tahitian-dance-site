@@ -24,7 +24,7 @@
 
 /* Logo centered in Hero */
 .hero-logo {
-  width: 400px; /* adjust size if needed */
+  width: 400px; /* default desktop size */
   z-index: 2;
   position: relative;
   bottom: 20%;
@@ -35,4 +35,38 @@
 
 .hero-logo:hover {
   transform: scale(1.05);
+}
+
+/* === Tablet / Mobile Responsiveness === */
+@media (max-width: 1024px) {
+  .hero {
+    height: 50vh;
+  }
+  .hero-logo {
+    width: 300px;
+    bottom: 15%;
+    left: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 45vh;
+  }
+  .hero-logo {
+    width: 220px;
+    bottom: 10%;
+    left: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 40vh;
+  }
+  .hero-logo {
+    width: 160px;
+    bottom: 8%;
+    left: 20%;
+  }
 }

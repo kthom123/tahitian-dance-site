@@ -5,45 +5,46 @@
 }
 
 .classes-title {
-  font-size: 2.0rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   color: #213547;
 }
 
+/* Grid: default horizontal scroll on mobile, grid wrap on desktop */
 .classes-grid {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  gap: 1.5rem;
+  flex-wrap: wrap;         /* desktop: wrap to multiple rows */
   justify-content: center;
+  gap: 1.5rem;
 }
 
+/* Class Cards */
 .class-card {
   background: url("/images/watercolor.png") no-repeat center center/cover;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(135, 219, 217, 0.2);
   border-radius: 12px;
-  flex: 1 1 18%;
+  flex: 1 1 18%;           /* default desktop sizing */
   min-width: 180px;
   max-width: 220px;
-  transition: transform 0.3s ease;
   color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .class-card:hover {
   transform: scale(1.08);
   box-shadow: 0 8px 16px rgba(135, 219, 217, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Heading with flower */
 .class-card h3 {
   font-size: 1.15rem;
   margin-bottom: 1rem;
   color: #ffffff;
   line-height: 1.2;
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
 }
 
 .class-card h3::before {
@@ -53,39 +54,66 @@
   background-size: contain;
   width: 1.2em;
   height: 1.2em;
-  vertical-align: text-top;
-  margin-right: 0.3em;
 }
 
-.class-heading {
-  display: inline; /* ensures normal inline behavior */
-}
-
-.class-heading .flower-icon {
-  width: 1.2em;
-  height: 1.2em;
-  object-fit: contain;
-  vertical-align: text-top; /* aligns with first line of text */
-  margin-right: 0.3em;      /* space between icon and text */
-}
-
+/* Paragraph text */
 .class-card p {
   font-size: 0.85rem;
   color: #fffefe;
   text-align: left;
 }
 
-@keyframes strobeForward {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+/* === Responsive: Mobile / Tablet === */
+@media (max-width: 768px) {
+  .classes-grid {
+    flex-wrap: nowrap;          /* horizontal scroll */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
   }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(135, 219, 217, 0.4);
+
+  .classes-grid::-webkit-scrollbar {
+    display: none;              /* hide scrollbar */
   }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+  .class-card {
+    flex: 0 0 auto;             /* prevent shrinking */
+    scroll-snap-align: center;
+    min-width: 200px;
+    max-width: 220px;
+  }
+
+  .classes-title {
+    font-size: 1.6rem;
+  }
+
+  .class-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .class-card p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .class-card {
+    min-width: 180px;
+    padding: 1rem;
+  }
+
+  .classes-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .class-card h3 {
+    font-size: 1rem;
+  }
+
+  .class-card p {
+    font-size: 0.75rem;
   }
 }

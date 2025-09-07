@@ -5,7 +5,7 @@
 }
 
 .trial-title {
-  font-size: 2.0rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   color: #213547;
 }
@@ -17,6 +17,7 @@
   line-height: 1.8;
 }
 
+/* Trial Items Card */
 .trial-items {
   position: relative;
   background: url("/images/watercolor.png") no-repeat center center/cover;
@@ -30,6 +31,11 @@
   font-family: 'Cinzel', serif;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trial-items:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(135, 219, 217, 0.4);
 }
 
 .trial-subtitle {
@@ -59,7 +65,44 @@
   z-index: 1;
 }
 
-.trial-items:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 16px rgba(135, 219, 217, 0.4);
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .trial-items {
+    max-width: 500px;
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trial-items {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+  .trial-description {
+    font-size: 1rem;
+  }
+  .trial-subtitle {
+    font-size: 1.05rem;
+  }
+  .trial-items li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trial-items {
+    padding: 1.2rem;
+  }
+  .trial-title {
+    font-size: 1.6rem;
+  }
+  .trial-description {
+    font-size: 0.95rem;
+  }
+  .trial-subtitle {
+    font-size: 1rem;
+  }
+  .trial-items li {
+    font-size: 0.9rem;
+  }
 }

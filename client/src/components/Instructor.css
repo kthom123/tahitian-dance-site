@@ -5,23 +5,25 @@
 }
 
 .instructor-heading {
-  font-size: 2.0rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   color: #213547;
 }
 
+/* Container: photo + bio */
 .instructor-container {
   display: flex;
-  flex-direction: row; /* ← key change */
+  flex-direction: row;       /* side-by-side on desktop */
   align-items: center;
   justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
   gap: 2rem;
-  flex-wrap: wrap; /* responsive fallback */
+  flex-wrap: wrap;           /* fallback for smaller screens */
   text-align: left;
 }
 
+/* Photo */
 .instructor-photo {
   width: 300px;
   height: auto;
@@ -31,6 +33,7 @@
   flex-shrink: 0;
 }
 
+/* Bio text */
 .instructor-bio {
   flex: 1;
   max-width: 600px;
@@ -38,18 +41,7 @@
   line-height: 1.8;
 }
 
-@media (max-width: 768px) {
-  .instructor-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .instructor-bio {
-    text-align: left;
-    padding: 0 1rem;
-  }
-}
-
+/* Image + name groups */
 .instructor-image-group {
   display: flex;
   flex-direction: column;
@@ -67,4 +59,56 @@
   font-weight: bold;
   color: #333;
   margin: 0;
+}
+
+/* === Tablet / Mobile Responsiveness === */
+@media (max-width: 1024px) {
+  .instructor-container {
+    gap: 1.5rem;
+  }
+
+  .instructor-photo {
+    width: 250px;
+  }
+
+  .instructor-bio {
+    font-size: 0.95rem;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .instructor-container {
+    flex-direction: column;   /* stack photo above bio */
+    text-align: center;
+  }
+
+  .instructor-bio {
+    text-align: left;
+    padding: 0 1rem;
+  }
+
+  .instructor-photo {
+    width: 220px;
+  }
+
+  .instructor-bio {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .instructor-photo {
+    width: 180px;
+  }
+
+  .instructor-bio {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+
+  .instructor-heading {
+    font-size: 1.6rem;
+  }
 }

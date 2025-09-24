@@ -10,14 +10,18 @@
   color: #213547;
 }
 
-/* Horizontal scroll grid */
 .classes-grid {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding: clamp(0.5rem, 2vw, 1rem) 0;
   gap: clamp(1rem, 3vw, 1.5rem);
   justify-content: flex-start;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.classes-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 .class-card {
@@ -61,6 +65,13 @@
 }
 
 /* === MEDIA QUERIES === */
+
+/* On wider screens (tablet+), center cards */
+@media (min-width: 1024px) {
+  .classes-grid {
+    justify-content: center;
+  }
+}
 
 /* Tablets (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {

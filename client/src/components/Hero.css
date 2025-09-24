@@ -19,21 +19,42 @@
   z-index: 1;
 }
 
-/* Logo positioned top-right */
+/* Logo positioned top-right with pop-in effect */
 .hero-logo {
   position: absolute;
-  top: 1rem;   /* adjust spacing from top */
-  right: 1rem; /* adjust spacing from right */
+  top: 1rem;   /* spacing from top */
+  right: 1rem; /* spacing from right */
   width: clamp(150px, 20vw, 300px); /* responsive scaling */
   z-index: 2;
   filter: drop-shadow(0 0 8px rgb(74, 72, 72));
-  transition: transform 0.3s ease;
+
+  /* Animation */
+  opacity: 0;
+  transform: scale(0.5) translateY(50px);
+  animation: logoPopIn 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+
+  transition: transform 0.3s ease; /* keep hover transition */
 }
 
 .hero-logo:hover {
   transform: scale(1.05);
 }
 
+@keyframes logoPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(50px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
 
 /* === MEDIA QUERIES === */
 
@@ -45,7 +66,6 @@
 
   .hero-logo {
     width: clamp(180px, 40vw, 300px);
-    bottom: clamp(8%, 12vw, 15%);
   }
 }
 
@@ -57,6 +77,5 @@
 
   .hero-logo {
     width: clamp(150px, 50vw, 200px);
-    bottom: clamp(5%, 10vw, 10%);
   }
 }

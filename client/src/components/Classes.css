@@ -1,58 +1,48 @@
-/* === Classes Section === */
 .classes-section {
-  padding: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem); /* more top/bottom space */
   background-color: #ffffff;
   text-align: center;
-  overflow: visible; /* allows hover pop-out */
 }
 
-/* Section title */
 .classes-title {
   font-size: clamp(1.5rem, 4vw, 2rem);
-  margin-bottom: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
   color: #213547;
 }
 
-/* Horizontal scroll grid for mobile fallback */
+/* Horizontal scroll grid */
 .classes-grid {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center; /* center on desktop */
   overflow-x: auto;
+  overflow-y: visible;  /* allow hover pop-out */
   gap: clamp(1rem, 3vw, 1.5rem);
-  padding: clamp(0.5rem, 2vw, 1rem) 0;
-  scroll-behavior: smooth;
+  justify-content: center; /* center cards on PC */
+  padding-block: clamp(1.5rem, 3vw, 2rem); /* vertical padding for hover */
+  padding-inline: clamp(1rem, 5vw, 2rem); /* horizontal padding */
+  scroll-padding-inline: clamp(1rem, 5vw, 2rem);
   overscroll-behavior-x: contain;
+  position: relative;
 }
 
-/* Cards */
 .class-card {
   background: url("/images/watercolor.png") no-repeat center center/cover;
   padding: clamp(1rem, 2vw, 1.5rem);
   box-shadow: 0 4px 12px rgba(135, 219, 217, 0.2);
   border-radius: 12px;
-  flex: 0 0 clamp(180px, 18vw, 220px); /* responsive width */
+  flex: 0 0 clamp(140px, 18vw, 220px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: white;
-  position: relative;
+  position: relative; /* needed for overflow visibility */
+  z-index: 1;
 }
 
-/* Hover effect: larger on desktop, smaller on mobile */
-@media (min-width: 768px) {
-  .class-card:hover {
-    transform: translateZ(20px) scale(1.08) rotateX(2deg) rotateY(-2deg);
-    box-shadow: 0 8px 16px rgba(135, 219, 217, 0.4);
-  }
+.class-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(135, 219, 217, 0.4);
+  z-index: 10; /* make sure hovered card is on top */
 }
 
-@media (max-width: 767px) {
-  .class-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(135, 219, 217, 0.35);
-  }
-}
-
-/* Card headings with flower icon */
 .class-card h3 {
   font-size: clamp(1rem, 2vw, 1.15rem);
   margin-bottom: clamp(0.8rem, 2vw, 1rem);
@@ -72,22 +62,16 @@
   margin-right: 0.3em;
 }
 
-/* Card text */
 .class-card p {
   font-size: clamp(0.8rem, 1.5vw, 0.85rem);
   color: #fffefe;
   text-align: left;
 }
 
-/* === Media Queries === */
+/* === MEDIA QUERIES === */
 
 /* Tablets (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .classes-grid {
-    justify-content: center;
-    gap: clamp(1.2rem, 3vw, 1.5rem);
-  }
-
   .class-card {
     flex: 0 0 clamp(180px, 25vw, 200px);
   }
@@ -103,14 +87,8 @@
 
 /* Small devices (below 768px) */
 @media (max-width: 767px) {
-  .classes-section {
-    padding-top: clamp(3rem, 10vw, 4rem);
-    padding-bottom: clamp(3rem, 10vw, 4rem);
-  }
-
   .classes-grid {
-    justify-content: flex-start;
-    padding-left: clamp(0.5rem, 5vw, 1rem);
+    justify-content: flex-start; /* left align for scroll */
   }
 
   .class-card {

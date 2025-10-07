@@ -58,8 +58,7 @@
   background-size: contain;
   width: 1.2em;
   height: 1.2em;
-  vertical-align: text-top;
-  margin-right: 0.3em;
+  vertical-align: middle;
 }
 
 .class-card p {

@@ -41,24 +41,38 @@
 }
 
 /* === Popup Modal === */
+/* Popup overlay default hidden */
 .popup-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
 }
 
+/* Show overlay */
+.popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popup content initial state */
 .popup-content {
+  transform: scale(0.8) translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   background: #fff;
-  padding: clamp(1.5rem, 4vw, 2rem);
+  padding: clamp(1.5rem,4vw,2rem);
   border-radius: 12px;
-  width: clamp(80%, 90vw, 500px);
+  width: clamp(300px, 80%, 400px); /* fixed width for desktop */
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
@@ -66,6 +80,11 @@
   font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
+/* Popup content when visible */
+.popup-overlay.show .popup-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
 /* === Close Button === */
 .popup-close {
   position: absolute;
@@ -107,11 +126,13 @@
 /* === MEDIA QUERIES === */
 
 /* Tablets (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 767px) {
   .popup-card {
-    width: clamp(140px, 40%, 180px);
-    height: clamp(110px, 25vw, 140px);
-    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    width: 90%;
+    aspect-ratio: 4 / 3;   /* maintain card form */
+    height: auto;           /* optional, aspect-ratio handles height */
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    padding: clamp(0.8rem, 2.5vw, 1rem);
   }
 
   .popup-content {
@@ -123,13 +144,15 @@
 @media (max-width: 767px) {
   .flip-grid {
     gap: clamp(0.5rem, 3vw, 1rem);
+    justify-content: center;
   }
 
   .popup-card {
-    width: 90%;
-    height: auto;
-    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
-    padding: clamp(0.8rem, 2.5vw, 1rem);
+    width: clamp(120px, 45%, 150px); /* smaller than PC */
+    aspect-ratio: 4 / 3;             /* keeps card shape */
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    padding: clamp(0.6rem, 2vw, 1rem);
+    height: auto;                     /* height follows aspect-ratio */
   }
 
   .popup-content {

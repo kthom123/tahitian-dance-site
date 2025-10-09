@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
 .instructor-section {
   padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 3vw, 2rem);
   background-color: #ffffff;
@@ -55,6 +57,13 @@
   font-weight: bold;
   color: #333;
   margin: 0;
+}
+
+.instructor-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 100;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  color: #213547; /* optional color */
 }
 
 /* === MEDIA QUERIES === */

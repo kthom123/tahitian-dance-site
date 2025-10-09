@@ -10,3 +10,13 @@ server/*.pyc
 # OS
 .DS_Store
 .env
+
+# dependencies
+node_modules/
+
+# local env files
+.env
+
+# build files
+dist/
+build/

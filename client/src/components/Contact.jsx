@@ -16,7 +16,7 @@ function Contact() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/send", {
+      const response = await fetch("https://tahitian-dance-site.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
